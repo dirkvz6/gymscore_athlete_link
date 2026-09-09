@@ -13,11 +13,15 @@ ALTER TABLE athletes DROP CONSTRAINT IF EXISTS athletes_age_check;
 ALTER TABLE athletes ADD CONSTRAINT athletes_age_check
   CHECK (
     age IS NULL OR age = ANY (ARRAY[
+      '6 years',
+      '6-7 years',
+      '7 years', 
       '7-8 years',
       '7-9 years',
       '7-10 years',
       '7-11 years',
       '7-13 years',
+      '8 years',
       '9 years',
       '9-10 years',
       '9-11 years',

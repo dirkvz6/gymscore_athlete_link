@@ -35,10 +35,15 @@ ALTER TABLE athletes RENAME COLUMN age_group TO age;
 -- Add constraint to ensure only valid age groups
 ALTER TABLE athletes ADD CONSTRAINT athletes_age_check 
 CHECK (age IS NULL OR age IN (
+  '6 years',
+  '6-7 years',
+  '7 years', 
   '7-9 years',
   '7-10 years', 
   '7-11 years',
   '7-13 years',
+  '8 years', 
+  '9 years', 
   '10 years',
   '11 years',
   '12 years',
